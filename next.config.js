@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const withLinaria = require('next-with-linaria');
 
-module.exports = nextConfig
+const nextConfig = {
+  // App Directory を有効化
+  experimental: {
+    appDir: true,
+  },
+};
+module.exports = withLinaria(nextConfig);
